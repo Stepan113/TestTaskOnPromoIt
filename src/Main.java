@@ -1,4 +1,5 @@
 import Commands.ReadDailyPlaner;
+import Commands.Statistics;
 import Commands.WriteDailyPlaner;
 
 import java.io.IOException;
@@ -17,6 +18,8 @@ public class Main {
             System.out.println("Управление:\n" +
                     "#write - записать задачу\n" +
                     "#readAll - считать все задачи\n" +
+                    "#searchTaskByDay - найти все задачи в этот день\n" +
+                    "#statistics - статистика использования записной книжки\n" +
                     "#exit - выйти\n");
             System.out.print("Введите команду: ");
             String requestUser = scanner.nextLine();
@@ -29,6 +32,14 @@ public class Main {
                         }
                         case "#readAll": {
                             ReadDailyPlaner.readAllDailyPlaner();
+                            break;
+                        }
+                        case "#searchTaskByDay": {
+                            ReadDailyPlaner.readTask();
+                            break;
+                        }
+                        case "#statistics": {
+                            Statistics.statistics();
                             break;
                         }
                         default:
