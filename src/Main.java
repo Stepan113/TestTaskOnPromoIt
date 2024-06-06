@@ -1,14 +1,15 @@
 import Commands.ReadDailyPlaner;
 import Commands.WriteDailyPlaner;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         mainCycle();
     }
 
-    private static void mainCycle() {
+    private static void mainCycle() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Здравствуйте!\n" +
                 "Это Ваш личный ежедневник для задач!");
